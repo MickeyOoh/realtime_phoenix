@@ -17,6 +17,17 @@ There are different levels of guarantee in a real-time system. Hardware systems 
 This book will look at "soft" real-time applications, also known as near real-time. Soft real-time applications can have several seconds of delay when updating the user's view, with a goal of minimizing the amount of time the update takes. A soft real-time application should update to the correct state without user intervention.
 
 
+Connect a Simple WebSocket
+----
+
+Why WebSockets?
+----
+WebSockets's strengths
+* WebSockets allow for efficient two-way data communication over a single TCP connection. This helps to minimize message bandwidth and avoids the overhead of crating frequent connections.
+* WebSockets have strong support in Elixir with the cowboy web server They map very well to the Erlang process model which helps to create robust performance-focused applications
+* WebSockets originate with an HTTP request, which means that many standard web technologies such as load balancers and proxies can be used with them.
+* WebSockets are able to stay at the edge of our Elixir application. We can change out our communication layer in the future if a better technology becomes available.
+
 
 Chap03: First Steps with Phoenix Channels
 ----
@@ -27,5 +38,4 @@ PubSub
 Phoenix.PubSub powers topic subscription and message broadcasting in our real-time application. Channels use PubSub internally, so we will rarely interact with it directly. However, it's useful to understand PubSub because we'll need to to configure it properly for our application to ensure performance and communication availability.
 
 PubSub is linked between a local node and all connected remote nodes. This allows PubSub to broadcast messages across the entire cluster.
-
 
