@@ -24,7 +24,7 @@ defmodule HelloSocketsWeb.AuthSocket do
   @one_day 86400
 
   defp verify(socket, token) do
-    IO.puts("token=#{inspect token}")
+    ##IO.puts("token=#{inspect token}")
     Phoenix.Token.verify(
       socket,
       "salt identifier",

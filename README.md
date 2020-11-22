@@ -1,6 +1,5 @@
 ## Real-Time Phoenix
-#### Build Highly Scalable Systems with Channels
-                            by Stephen Bussey
+#### Build Highly Scalable Systems with Channels by Stephen Bussey
 
 ### Real-Time is Now
 Users have higher demands than ever before. It's no longer good enough to have fast requests that complete in 100 ms or less. Today's software users expect the data on their screen to reflect now, even before they ask for it.
