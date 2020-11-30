@@ -38,3 +38,28 @@ Phoenix.PubSub powers topic subscription and message broadcasting in our real-ti
 
 PubSub is linked between a local node and all connected remote nodes. This allows PubSub to broadcast messages across the entire cluster.
 
+Chapter 4: Restrict Socket and Channel Access
+----
+
+We'll start this chapter by examining how to restrict access to Channels and Sockets, to ensure that data is provided only to the right users. We'll use a `Phoenix.Token' to pass authentication information from the server to the view, and then will use that to add Channel access restriction to JavaScript client.
+
+Why Restrict Access?
+-----
+There are two different types of access restriction that we'll focus on.
+1. authentication prevent non-users from accessing your application.
+2. authorization prevents users from accessing each other's data.
+
+
+
+Chap06 Avoid Performance Pitfalls
+-----
+You now have the tools and knowledge to build a real-time application using Phoenix Channels. However, you will need to run this application for real users in order for it to be useful.
+Your application needs to be able to operate efficiently so that requests do not time out, encounter errors, or otherwise not work correctly.
+
+Three pitfalls
+1. Unknown application health
+   We're able to identify root cause by looking at all of our metrics. You'll see how to add measurements to our Elixir applications using StatsD.
+
+2. Limited Channel throughput
+
+   

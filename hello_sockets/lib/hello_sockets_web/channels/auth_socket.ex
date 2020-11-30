@@ -5,6 +5,7 @@ defmodule HelloSocketsWeb.AuthSocket do
   channel "ping", HelloSocketsWeb.PingChannel
   channel "tracked", HelloSocketsWeb.TrackedChannel
   channel "recurring", HelloSocketsWeb.RecurringChannel
+  channel "user:*", HelloSocketsWeb.AuthChannel
 
   def connect(%{"token" => token}, socket) do
     case verify(socket, token) do
@@ -24,7 +25,7 @@ defmodule HelloSocketsWeb.AuthSocket do
   @one_day 86400
 
   defp verify(socket, token) do
-    ##IO.puts("token=#{inspect token}")
+    #IO.puts("token=#{inspect token}")
     Phoenix.Token.verify(
       socket,
       "salt identifier",
