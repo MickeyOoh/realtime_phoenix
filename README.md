@@ -61,5 +61,17 @@ Three pitfalls
    We're able to identify root cause by looking at all of our metrics. You'll see how to add measurements to our Elixir applications using StatsD.
 
 2. Limited Channel throughput
+   Channels use a single process on the server to process incoming and outgoing requests. 
+   If we're not careful, we can constrain our application so that long running requests prevent the Channel from processing. We'll solve this problem with `built-in Phoenix functions`
+
+3. Unintentional data pipeline
+   We can build a pipeline that efficiently moves data from server to user.
+   We should be intentional in our data pipeline design so that we know the capablities and limitations of our solution. We'll use `GenStage` to build a production-ready data pipeline.
+
+
+
+Chap07 Build a Real-Time Sneaker Store
+-----
+
 
    
