@@ -15,7 +15,12 @@ defmodule Sneakers23.Application do
     children = [
       Sneakers23.Repo,
       Sneakers23Web.Endpoint,
-      Sneakers23.Inventory
+      Sneakers23.Inventory,
+      ## [warn] The :pubsub key in your Sneakers23Web.Endpoint is deprecated.
+      ## You must now start the pubsub in your application supervision tree.
+      ## Go to lib/my_app/application.ex and add the following:
+      {Phoenix.PubSub, [name: Sneakers23.PubSub, adapter: Phoenix.PubSub.PG2]},
+      Sneakers23.Replication,
     ]
 
     opts = [strategy: :one_for_one, name: Sneakers23.Supervisor]

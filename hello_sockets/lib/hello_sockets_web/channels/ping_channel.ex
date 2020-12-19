@@ -15,7 +15,6 @@ defmodule HelloSocketsWeb.PingChannel do
     {:reply, {:ok, %{ping: phrase}}, socket}
   end
   def handle_in("ping", _payload, socket) do
-    IO.puts "PingChannel handle_in"
     {:reply, {:ok, %{ping: "pong"}}, socket}
   end
   def handle_in("pong", _payload, socket) do
