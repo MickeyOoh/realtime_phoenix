@@ -55,4 +55,9 @@ defmodule Sneakers23Web.Endpoint do
     signing_salt: "vQ36MbLa"
 
   plug Sneakers23Web.Router
-end
+
+  if Application.get_env(:sneakers_23, :sql_sandbox) do
+    plug Phoenix.Ecto.SQL.Sandbox
+  end
+ 
+ end

@@ -43,7 +43,7 @@ defmodule Sneakers23.MixProject do
     [
       {:phoenix, "~> 1.5.7"},
       #{:phoenix, github: "phoenixframework/phoenix", branch: "master"},
-      {:phoenix_pubsub, "~> 2.0.0"},
+      ##{:phoenix_pubsub, "~> 2.0.0"},
       # {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
       {:ecto_sql, "~> 3.0"},
@@ -52,7 +52,8 @@ defmodule Sneakers23.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:hound, "~> 1.0"},
     ]
   end
 

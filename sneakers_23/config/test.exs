@@ -28,5 +28,9 @@ config :sneakers_23, Sneakers23Web.Endpoint,
   http: [port: 4002],
   server: false
 
+config :hound, driver: "chrome_driver", browser: "chrome_headless"
+
+config :sneakers_23, sql_sandbox: true 
+
 # Print only warnings and errors during test
 config :logger, level: :warn
